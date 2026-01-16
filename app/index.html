@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ressourcenplanung – Prototyp</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Ressourcenplanung</h1>
+      <p>Prototyp für Wochen-, Monats- und Jahresansichten</p>
+    </div>
+    <div class="legend">
+      <span class="legend-item"><span class="chip red"></span> < 30%</span>
+      <span class="legend-item"><span class="chip yellow"></span> 30–60%</span>
+      <span class="legend-item"><span class="chip green"></span> > 60%</span>
+      <span class="legend-item"><span class="chip blue"></span> > 90% (Überbucht)</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Monatsansicht (Drag &amp; Drop von Wochenblöcken)</h2>
+      <div id="monthView" class="month-view"></div>
+    </section>
+
+    <section class="panel split">
+      <div>
+        <h2>Wochenübersicht</h2>
+        <table class="table" id="weeklyTable"></table>
+      </div>
+      <div>
+        <h2>Jahresübersicht</h2>
+        <table class="table" id="yearlyTable"></table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>Hinweis: Dies ist ein klickbarer Prototyp ohne Backend.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
