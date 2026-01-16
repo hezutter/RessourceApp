@@ -1,0 +1,212 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1f2a44;
+  --muted: #6b7a90;
+  --border: #e3e7f0;
+  --shadow: 0 8px 24px rgba(31, 42, 68, 0.08);
+  --red: #e85757;
+  --yellow: #f1b74a;
+  --green: #3bb273;
+  --blue: #3a7bd5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  padding: 32px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.app-header p {
+  color: var(--muted);
+}
+
+.legend {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.chip {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.chip.red {
+  background: var(--red);
+}
+
+.chip.yellow {
+  background: var(--yellow);
+}
+
+.chip.green {
+  background: var(--green);
+}
+
+.chip.blue {
+  background: var(--blue);
+}
+
+main {
+  display: grid;
+  gap: 24px;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.panel.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.panel h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.month-view {
+  display: grid;
+  gap: 16px;
+}
+
+.month-row {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 140px repeat(4, minmax(120px, 1fr));
+  gap: 8px;
+  background: #fafbff;
+}
+
+.month-row strong {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.week-slot {
+  background: #fff;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  min-height: 72px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.week-card {
+  border-radius: 10px;
+  padding: 8px;
+  background: #f1f5ff;
+  border: 1px solid #dde5ff;
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.week-card strong {
+  font-size: 13px;
+}
+
+.week-card span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.table th {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.status::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.status.red {
+  color: var(--red);
+}
+
+.status.yellow {
+  color: var(--yellow);
+}
+
+.status.green {
+  color: var(--green);
+}
+
+.status.blue {
+  color: var(--blue);
+}
+
+.app-footer {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 12px;
+}
